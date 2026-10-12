@@ -18,6 +18,8 @@ const projects = [
   { title: 'Personal app 03', kind: 'Web or mobile app', summary: 'Add a sentence about what makes this app useful.', image: null, href: 'https://github.com/' },
 ];
 
+const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 function CodeCard() {
   return (
     <motion.aside
@@ -122,7 +124,7 @@ export default function App() {
             <motion.div className="max-w-2xl text-lg leading-relaxed text-[#6f625a]" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.65, delay: 0.12 }}><p className="mt-0">I’m Aarti, a frontend engineering lead with more than a decade of experience building web and mobile products. My work spans Angular, React Native, Ionic, and JavaScript applications used by customers and frontline teams.</p><p className="mb-0">I care about making applications fast, reliable, and easier to evolve. I’ve led teams through legacy modernization, performance improvements, analytics integrations, and end-to-end delivery.</p></motion.div>
           </div>
           <motion.figure className="relative mx-auto w-full max-w-[390px] rounded-[30px] bg-[#eadfcb] p-3 md:mr-0" initial={{ opacity: 0, x: 24, scale: 0.98 }} whileInView={{ opacity: 1, x: 0, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}>
-            <img className="aspect-[3/4] w-full rounded-[22px] object-cover object-[center_42%] grayscale" src="/aarti-yadav-portrait.jpg" alt="Portrait of Aarti Yadav" />
+            <img className="aspect-[3/4] w-full rounded-[22px] object-cover object-[center_42%] grayscale" src={publicAsset('aarti-yadav-portrait.jpg')} alt="Portrait of Aarti Yadav" />
             <figcaption className="flex items-center justify-between gap-3 px-2 pb-1 pt-4"><span className="font-bold tracking-[-.03em]">Aarti Yadav</span><span className="text-right text-xs text-[#6f625a]">Frontend engineering<br />& technical leadership</span></figcaption>
           </motion.figure>
         </div>
@@ -165,7 +167,7 @@ export default function App() {
         <p className="m-0 text-[15px] font-extrabold tracking-[-.045em] text-[#64564f]">&lt; RÉSUMÉ /&gt;</p>
         <motion.div className="mt-7 flex flex-col justify-between gap-8 rounded-[28px] bg-[#4b1f0e] p-7 text-[#f7f1df] sm:flex-row sm:items-center sm:p-10 lg:p-14" initial={{ opacity: 0, scale: 0.98, y: 20 }} whileInView={{ opacity: 1, scale: 1, y: 0 }} viewport={{ once: true, amount: 0.35 }} transition={{ duration: 0.65, ease: 'easeOut' }}>
           <div className="max-w-2xl"><h2 className="m-0 text-4xl font-extrabold tracking-[-.06em] sm:text-5xl">Résumé</h2><p className="mb-0 mt-4 leading-relaxed text-[#ddcabe]">A concise overview of my 10+ years in frontend and mobile engineering, team leadership, and product delivery.</p></div>
-          <a className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#f7f1df] px-6 py-3 font-semibold text-[#4c1e0d] no-underline transition-transform hover:scale-[1.03]" href="/AartiCV.pdf" target="_blank" rel="noreferrer">Download résumé ↗</a>
+          <a className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#f7f1df] px-6 py-3 font-semibold text-[#4c1e0d] no-underline transition-transform hover:scale-[1.03]" href={publicAsset('AartiCV.pdf')} target="_blank" rel="noreferrer">Download résumé ↗</a>
         </motion.div>
       </section>
       <section className="border-t border-[#00851c]/25 px-6 py-16 sm:px-[5.7vw] sm:py-24" id="contact">
