@@ -60,7 +60,10 @@ export default function App() {
           <p className="mb-2 text-sm tracking-[-.04em] sm:text-[clamp(15px,1.23vw,25px)]">CURRENTLY EXPLORING</p>
           <p className="m-0 text-[19px] tracking-[-.04em] sm:text-[clamp(20px,1.65vw,33px)]">Backend <span>·</span> CI/CD <span>·</span> Cloud <span>·</span> Architecture</p>
         </motion.div>
-        <motion.a animate={{ y: [0, 6, 0] }} transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }} className="absolute bottom-[26px] left-6 text-[13px] text-[#63321e] no-underline sm:bottom-[9.7vh] sm:left-1/2 sm:-translate-x-1/2 sm:text-[clamp(14px,1.12vw,22px)]" href="#work">SCROLL TO EXPLORE <span className="sm:hidden">↓</span></motion.a>
+        <a className="group absolute bottom-6 left-6 inline-flex items-center gap-3 rounded-full border border-[#63321e]/20 bg-[#fbf7eb]/65 py-2 pl-4 pr-2 text-[11px] font-semibold tracking-[.14em] text-[#63321e] no-underline backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#a56838]/60 hover:bg-[#fbf7eb] sm:bottom-[8.8vh] sm:left-1/2 sm:-translate-x-1/2 sm:py-2.5 sm:pl-5 sm:pr-2.5 sm:text-xs" href="#work">
+          <span>SCROLL TO EXPLORE</span>
+          <motion.span aria-hidden="true" className="grid h-8 w-8 place-items-center rounded-full bg-[#4c1e0d] text-sm text-[#f7f1df] transition-colors group-hover:bg-[#a56838] sm:h-9 sm:w-9" animate={{ y: [0, 3, 0] }} transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}>↓</motion.span>
+        </a>
       </section>
       <section className="relative min-h-[60vh] border-t border-[#00851c]/35 px-6 pb-[110px] pt-[65px] sm:min-h-[65vh] sm:px-[5.7vw] sm:py-[10vh]" id="work">
         <p className="m-0 text-[15px] font-extrabold tracking-[-.045em] text-[#64564f]">&lt; PERSONAL PROJECTS /&gt;</p>
